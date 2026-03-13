@@ -18,7 +18,7 @@
   <!-- TOP BAR -->
   <div class="topbar">
     <div class="container topbar-inner">
-      <span><i class="fa-solid fa-phone"></i> (31) 9.9535-3925</span>
+      <span><i class="fa-solid fa-phone"></i> (31) 9.9535-3925 | (31) 2112-1934</span>
       <div class="topbar-social">
         <a href="#!" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
         <a href="#!" aria-label="X / Twitter"><i class="fa-brands fa-x-twitter"></i></a>
@@ -63,6 +63,7 @@
   <!-- HERO -->
   <section class="hero" id="topo">
     <div class="hero-overlay"></div>
+    <div class="hero-deco" aria-hidden="true"></div>
     <div class="container hero-content">
       <div class="hero-text">
         <span class="hero-tag">Advocacia e Consultoria Empresarial</span>
@@ -277,10 +278,7 @@
           Substitua pelo bloco abaixo quando tiver a imagem:
           <img src="foto-escritorio.jpg" alt="Escritório JPV Advogados" class="sobre-img" />
         -->
-        <div class="sobre-img-placeholder">
-          <i class="fa-solid fa-scale-balanced"></i>
-          <span>Foto do escritório</span>
-        </div>
+        <img src="img1.jpg" alt="Equipe JPV Advogados em reunião estratégica" class="sobre-img" />
         <div class="sobre-destaque">
           <i class="fa-solid fa-handshake"></i>
           <p>Envolvimento direto de pelo menos um dos sócios em cada caso</p>
@@ -311,11 +309,11 @@
 
         <div class="sobre-stats">
           <div>
-            <span class="stat-number">2</span>
+            <span class="stat-number" data-count="2">2</span>
             <span class="stat-label">Sócios especializados</span>
           </div>
           <div>
-            <span class="stat-number">10+</span>
+            <span class="stat-number" data-count="10" data-suffix="+">10+</span>
             <span class="stat-label">Áreas de atuação</span>
           </div>
           <div>
@@ -341,9 +339,7 @@
 
         <article class="equipe-card">
           <div class="equipe-foto">
-            <!--
-              Substitua por: <img src="joao-paulo.jpg" alt="João Paulo Ferreira de Campos Viana" />
-            -->
+            <img src="FotoJoao.jpg" alt="João Paulo Ferreira de Campos Viana" />
             <div class="equipe-foto-placeholder"><i class="fa-solid fa-user-tie"></i></div>
           </div>
           <div class="equipe-info">
@@ -363,9 +359,7 @@
 
         <article class="equipe-card">
           <div class="equipe-foto">
-            <!--
-              Substitua por: <img src="alvaro.jpg" alt="Álvaro Quintino da Silva Oliveira" />
-            -->
+            <img src="FotoAlvaro.jpg" alt="Álvaro Quintino da Silva Oliveira" />
             <div class="equipe-foto-placeholder"><i class="fa-solid fa-user-tie"></i></div>
           </div>
           <div class="equipe-info">
@@ -378,6 +372,25 @@
             </p>
             <a href="mailto:alvaro@jpvadv.com.br" class="equipe-email">
               <i class="fa-regular fa-envelope"></i> alvaro@jpvadv.com.br
+            </a>
+          </div>
+        </article>
+
+        <article class="equipe-card">
+          <div class="equipe-foto">
+            <!--
+              Substitua por: <img src="sophia.jpg" alt="Sophia – Estagiária" />
+            -->
+            <div class="equipe-foto-placeholder"><i class="fa-solid fa-user"></i></div>
+          </div>
+          <div class="equipe-info">
+            <h3>Sophia</h3>
+            <span class="equipe-oab">Estagiária</span>
+            <p>
+              <!-- Informações serão adicionadas em breve. -->
+            </p>
+            <a href="mailto:sophia@jpvadv.com.br" class="equipe-email">
+              <i class="fa-regular fa-envelope"></i> sophia@jpvadv.com.br
             </a>
           </div>
         </article>
@@ -418,6 +431,7 @@
             <div>
               <strong>E-mail geral</strong>
               <p>contato@jpvadv.com.br</p>
+              <p>joaopaulo@jpvadv.com.br</p>
             </div>
           </div>
           <div>
@@ -526,6 +540,17 @@
       </div>
     </div>
   </footer>
+
+  <!-- Botão flutuante WhatsApp -->
+  <a href="https://wa.me/5531995353925" target="_blank" rel="noopener"
+     class="whatsapp-float" aria-label="Fale conosco pelo WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <!-- Botão Voltar ao Topo -->
+  <button class="back-to-top" id="backToTop" aria-label="Voltar ao topo">
+    <i class="fa-solid fa-chevron-up"></i>
+  </button>
 
   <script src="script.js"></script>
 </body>
