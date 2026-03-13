@@ -88,18 +88,42 @@ if (anoSpan) anoSpan.textContent = new Date().getFullYear();
 // Feedback básico no formulário
 const form = document.getElementById("formContato");
 if (form) {
-  form.addEventListener("submit", (e) => {
+  form.addEventListener("submit", async (e) => {
     e.preventDefault();
+
     const btn = form.querySelector("button[type='submit']");
     const original = btn.innerHTML;
-    btn.innerHTML = '<i class="fa-solid fa-check"></i> Mensagem enviada!';
+
+    btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Enviando...';
     btn.disabled = true;
-    btn.style.background = "linear-gradient(135deg, #3a7a4a, #5aad6a)";
+
+    try {
+      const formData = new FormData(form);
+
+      const response = await fetch("https://formsubmit.co/ajax/joaopaulo@jpvadv.com.br", {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+        },
+        body: formData,
+      });
+
+      if (!response.ok) {
+        throw new Error("Falha ao enviar");
+      }
+
+      btn.innerHTML = '<i class="fa-solid fa-check"></i> Mensagem enviada!';
+      btn.style.background = "linear-gradient(135deg, #3a7a4a, #5aad6a)";
+      form.reset();
+    } catch (error) {
+      btn.innerHTML = '<i class="fa-solid fa-triangle-exclamation"></i> Tentar novamente';
+      btn.style.background = "linear-gradient(135deg, #8b1e1e, #b33939)";
+    }
+
     setTimeout(() => {
       btn.innerHTML = original;
       btn.disabled = false;
       btn.style.background = "";
-      form.reset();
     }, 3500);
   });
 }
