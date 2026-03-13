@@ -477,7 +477,7 @@
       </div>
 
       <div>
-        <form class="form-contato" id="formContato">
+        <form class="form-contato" id="formContato" autocomplete="off" novalidate>
           <input type="hidden" name="_subject" value="Novo contato - Site JPV Advogados" />
           <input type="hidden" name="_captcha" value="false" />
           <input type="hidden" name="_template" value="table" />
@@ -485,26 +485,26 @@
           <div class="form-row">
             <div class="form-group">
               <label for="nome">Nome completo</label>
-              <input type="text" id="nome" name="nome" placeholder="Seu nome" required />
+              <input type="text" id="nome" name="nome" placeholder="Seu nome" autocomplete="off" autocapitalize="words" spellcheck="false" required />
             </div>
           </div>
           <div class="form-row">
             <div class="form-group">
               <label for="email">E-mail</label>
-              <input type="email" id="email" name="email" placeholder="email@exemplo.com" required />
+              <input type="email" id="email" name="email" placeholder="email@exemplo.com" autocomplete="off" autocapitalize="none" spellcheck="false" required />
             </div>
             <div class="form-group">
               <label for="telefone">Telefone</label>
-              <input type="tel" id="telefone" name="telefone" placeholder="(31) 00000-0000" />
+              <input type="tel" id="telefone" name="telefone" placeholder="(31) 00000-0000" autocomplete="off" spellcheck="false" />
             </div>
           </div>
           <div class="form-group">
             <label for="assunto">Assunto</label>
-            <input type="text" id="assunto" name="assunto" placeholder="Ex.: Consulta trabalhista" />
+            <input type="text" id="assunto" name="assunto" placeholder="Ex.: Consulta trabalhista" autocomplete="off" spellcheck="false" />
           </div>
           <div class="form-group">
             <label for="mensagem">Mensagem</label>
-            <textarea id="mensagem" name="mensagem" rows="5" placeholder="Descreva brevemente sua demanda ou dúvida." required></textarea>
+            <textarea id="mensagem" name="mensagem" rows="5" placeholder="Descreva brevemente sua demanda ou dúvida." autocomplete="off" spellcheck="false" required></textarea>
           </div>
           <button type="submit" class="btn primary full">
             <i class="fa-regular fa-paper-plane"></i> Enviar mensagem

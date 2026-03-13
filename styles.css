@@ -615,12 +615,24 @@ button, input, textarea, select { font-family: inherit; }
 .form-group textarea {
   border-radius: 999px;
   border: 1px solid rgba(255,255,255,0.15);
-  padding: 0.65rem 1rem;
+  padding: 0.72rem 1.2rem;
   font-size: 0.88rem;
   background: rgba(255,255,255,0.05);
   color: #f0f4ff;
   outline: none;
   transition: border-color var(--transition), background var(--transition);
+}
+
+.form-group input:-webkit-autofill,
+.form-group input:-webkit-autofill:hover,
+.form-group input:-webkit-autofill:focus,
+.form-group textarea:-webkit-autofill,
+.form-group textarea:-webkit-autofill:hover,
+.form-group textarea:-webkit-autofill:focus {
+  -webkit-text-fill-color: #f0f4ff;
+  box-shadow: 0 0 0 1000px rgba(255,255,255,0.05) inset;
+  -webkit-box-shadow: 0 0 0 1000px rgba(255,255,255,0.05) inset;
+  transition: background-color 9999s ease-in-out 0s;
 }
 .form-group textarea { border-radius: var(--radius-md); resize: vertical; min-height: 120px; }
 .form-group input::placeholder,
